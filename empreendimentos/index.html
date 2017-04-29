@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://www.goldengenharia.com/avcb-ct-cffb1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="http://www.goldengenharia.com/is/userfaveicon?webCode=23B8D&amp;r=0.0615013">
+        
+        <!-- jQuery -->
+        <script type="text/javascript" async="" src="./AVCB/ga.js"></script><script type="text/JavaScript" src="./AVCB/jquery.1.9.1.min.js"></script>
+        <script type="text/javascript" src="./AVCB/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/JavaScript" src="./AVCB/jquery-ui-1.8rc3.custom.min.js"></script>
+        <script type="text/JavaScript" src="./AVCB/jquery.cookie.js"></script>
+        
+        <!-- Scripts do Iluria -->
+        <script type="text/JavaScript" src="./AVCB/iluria.js.jsp"></script>
+        
+        <!-- Plugin Fancybox -->
+        <link rel="stylesheet" href="./AVCB/jquery.fancybox.css" type="text/css" media="screen">
+        <script type="text/javascript" src="./AVCB/jquery.fancybox.pack.js"></script>
+        
+        <!-- Plugin UI.TO.TOP -->
+        <script type="text/javascript" src="./AVCB/jquery.easing.1.3.js"></script>
+        <link rel="stylesheet" href="./AVCB/ui.totop.css" type="text/css" media="screen">
+        <script type="text/javascript" src="./AVCB/jquery.ui.totop.js"></script>
+        <script type="text/javascript">$(function(){ $().UItoTop({ easingType: 'easeOutQuart' }); });</script>
+        
+        <!-- Plugin Maxlength -->
+        <script type="text/JavaScript" src="./AVCB/jquery.maxlength-min.js"></script>
+        
+        <!-- Plugin menu de categorias -->
+        <script type="text/javascript" src="./AVCB/jMenu.jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="./AVCB/jMenu.jquery.css" media="screen">
+        
+        <!-- Plugin PrettyPhoto -->
+        <script type="text/JavaScript" src="./AVCB/jquery.prettyPhoto.min.js"></script>
+        <link rel="stylesheet" href="./AVCB/prettyPhoto.css" type="text/css" media="screen">
+        
+        <!-- Google Web Fonts -->
+        <link href="./AVCB/css" rel="stylesheet" type="text/css">
+        
+        <!-- Tema da loja -->
+        <link rel="stylesheet" type="text/css" href="./AVCB/iluria-theme.css">
+        <link rel="stylesheet" type="text/css" href="./AVCB/cart.css">
+        <link rel="stylesheet" type="text/css" href="./AVCB/user-theme.css">
+
+
+
+<!-- Título da página -->
+
+
+    <title>AVCB - Gold Engenharia</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+		<script type="text/javascript">
+		
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-52982536-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		
+		</script>		
+
+
+<script>
+				iluriaShowPagination = false;
+			</script><script>
+	
+	</script><script>
+			function thumbMouseOver(elem) {
+				var $this = $(elem);
+				var secondUrl = $this.attr("data-second-image");
+				$this.attr("data-second-image", $this.css("background-image"));
+				var element = $this;
+				var secondImage = new Image();
+				secondImage.src = secondUrl ;
+				
+				if($this.attr("data-image-loaded") == "true"){
+					$(element).css("background-image", "url('"+secondImage.src+"')");
+				}
+				else{
+					secondImage.onload = function(){
+						$(element).css("background-image", "url('"+secondImage.src+"')");
+						$(element).attr("data-image-loaded", "true");
+					};
+				}
+			}
+			
+			function thumbMouseOut(elem) {
+				var $this = $(elem);
+				var firstImage = $this.attr("data-second-image");
+				// Coloco a url da segunda imagem novamente no atributo, retirando o url('')
+				var secondImage = $this.css("background-image");
+				secondImage = secondImage.replace("url(", "");
+				secondImage = secondImage.replace(")", "");
+				// caso exista aspas no link (IE)
+				secondImage = secondImage.replace("\"", "").replace("\"", "").replace("'", "").replace("'", "");
+				$this.attr("data-second-image", secondImage);
+				$this.css("background-image", firstImage);
+			}
+			
+			function freeSizeThumbMouseOver(elem) {
+				var $this = $(elem);
+				var secondUrl = $this.attr("data-second-image");
+				$this.attr("data-second-image", $this.attr("src"));
+				var element = $this;
+				var secondImage = new Image();
+				secondImage.src = secondUrl ;
+				
+				if($this.attr("data-image-loaded") == "true"){
+					$(element).attr("src", secondImage.src);
+				}
+				else{
+					secondImage.onload = function(){
+						$(element).attr("src", secondImage.src);
+						$(element).attr("data-image-loaded", "true");
+					};
+				}
+			} 
+			
+			function freeSizeThumbMouseOut(elem) {
+				var $this = $(elem);
+				var firstImage = $this.attr("data-second-image");
+				$this.attr("data-second-image", $this.attr("src"));
+				$this.attr("src", firstImage);
+			}
+			
+			$(function(){
+			    $(".iluria-product-thumb").bind('mouseenter', function() {
+			    	thumbMouseOver($(this));
+			    });
+			    $(".iluria-product-thumb").bind('mouseleave', function() {
+			    	thumbMouseOut($(this));
+			    });
+			
+			    $(".iluria-product-thumb-img").bind('mouseenter', function() {
+			        freeSizeThumbMouseOver($(this));
+			    });
+			    $(".iluria-product-thumb-img").bind('mouseleave', function() {
+			        freeSizeThumbMouseOut($(this));
+			    });
+			});
+			
+			
+		</script></head>
+
+<!-- Carrega a lista de produtos -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Este arquivo é comum a quase todas as páginas da loja -->
+<!-- Ele representa a estrutura geral do layout da loja -->
+<body>
+    
+    
+    
+    
+   	                
+    
+    	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="header" class="header-external">
+	<div id="header-inner">
+		<table cellpadding="0" cellspacing="0" width="100%">
+			<tbody><tr valign="middle">
+				<td align="left" width="100%">
+			        <!-- Campo de busca -->
+			        
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Barra de pesquisa de produtos -->
+<form action="http://www.goldengenharia.com/search.html" method="post" id="search-form">
+    <div class="search-bar">
+        <input type="text" name="searchQuery" autocomplete="off"><a href="javascript: doSearch();" class="search-bar-button">s</a>
+    </div>
+</form>
+
+<script>
+    $(function() { 
+        $(".search-bar input").focus(function() { $(this).val(""); }); 
+    });
+    function doSearch() {
+        $("#search-form").submit();
+    }
+</script>
+
+
+			    </td>			    
+			    <td align="right">
+		            <!-- Mensagem 'Olá visitante' -->
+		            <nobr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nobr>
+			    </td>
+			    
+			    
+			    	<td align="right">
+			             <nobr> <div class="iluria-layout-menu"> <a href="http://www.goldengenharia.com/contact.html">
+			             	
+			             	
+			            		Contato
+			            	
+			             </a></div></nobr>
+				    </td>
+			    
+			    <td align="right">
+		            <!-- Login -->
+		            <nobr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="logout-button iluria-layout-menu">
+        <a href="javascript: Iluria.showLoginSSLForm();">
+            
+            
+                <div>Entrar</div>
+            
+        </a>
+    </div>
+
+</nobr>
+			    </td>
+			    <td align="right">
+		            <!-- Minha conta -->
+		            <nobr>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Botão 'Minha conta' -->
+<div class="my-account-button iluria-layout-menu">
+    
+    
+        <div>
+            <span>f</span> <a href="javascript: doMyAccountClick()">Minha conta</a>
+        </div>
+    
+</div>
+
+<script>
+    function doMyAccountClick() {
+        
+            
+            Iluria.showLoginSSLForm();            
+        
+            }
+</script> 
+</nobr>
+			    </td>
+			    <td align="right">
+		            <!-- Carrinho de compras -->
+		            <nobr>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Botão do carrinho de compras -->
+<div class="cart-button">
+    
+    
+        <div>
+            <span>.</span> <a href="javascript: Iluria.inlineCart.showCart()">Meu carrinho</a>
+        </div>
+    
+</div>
+</nobr>
+				</td>
+			</tr>
+        </tbody></table>
+    </div>
+</div>
+<style>
+	#canvas { margin-top: 0; }
+	#canvas-inner { padding: 35px;}
+</style>
+	
+
+
+    	<div class="header-logo-full">
+        	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Logo da loja -->
+<div id="shop-logo" class="top-image">
+    <a href="http://www.goldengenharia.com/index.html">
+        
+            <img src="./AVCB/logo.jpg" border="0">
+        
+        
+    </a>
+</div>
+
+        </div>
+	
+    
+    <div id="canvas" class="canvas-border">
+        <div id="canvas-inner">
+            <div id="canvas-inner-header">
+                
+                
+                
+                
+                
+                
+                
+                <!-- Verifica se a barra de categorias está na horizontal -->            
+                
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Carrega a lista de categorias e subcategorias -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="horizontal-menu" style="visibility: visible;">
+	<div id="categories-menu-container" class="categories-menu-container ">
+	    <div class="categories-menu">
+	        <!-- Categorias -->
+	        <ul id="jMenu" class="jMenu">
+
+				
+		            
+
+
+
+
+
+
+           		
+
+	            
+
+
+
+
+
+
+
+	                <li class="category-menu">
+	                    <a class="fNiv category-title" href="http://www.goldengenharia.com/gold-ct-eb7d9">Gold</a>
+	                    
+	                    <!-- Subcategorias -->
+	                    
+	                </li>
+	            
+
+	                <li class="category-menu">
+	                    <a class="fNiv category-title" href="http://www.goldengenharia.com/avcb-ct-cffb1">AVCB</a>
+	                    
+	                    <!-- Subcategorias -->
+	                    
+	                </li>
+	            
+
+	                <li class="category-menu">
+	                    <a class="fNiv category-title" href="http://www.goldengenharia.com/seg-contra-quedas-ct-d8071">Seg contra quedas</a>
+	                    
+	                    <!-- Subcategorias -->
+	                    
+	                </li>
+	            
+
+	                <li class="category-menu">
+	                    <a class="fNiv category-title" href="http://www.goldengenharia.com/pericias-ct-cffb3">Perícias</a>
+	                    
+	                    <!-- Subcategorias -->
+	                    
+	                </li>
+	            
+
+	                <li class="category-menu">
+	                    <a class="fNiv category-title" href="http://www.goldengenharia.com/laudos-tec-ct-cffb4">Laudos Téc</a>
+	                    
+	                    <!-- Subcategorias -->
+	                    
+	                </li>
+	            
+
+	                <li class="category-menu">
+	                    <a class="fNiv category-title" href="http://www.goldengenharia.com/meio-ambiente-ct-cffb5">Meio Ambiente</a>
+	                    
+	                    <!-- Subcategorias -->
+	                    
+	                </li>
+	            
+
+	                <li class="category-menu">
+	                    <a class="fNiv category-title" href="http://www.goldengenharia.com/cursos-ct-cf9f1">Cursos</a>
+	                    
+	                    <!-- Subcategorias -->
+	                    
+	                        <ul class="subcategory-menu-container" style="display: none;">
+	                            
+	                            
+
+
+
+
+
+
+
+
+	                                <li class="subcategory-menu"><a href="http://www.goldengenharia.com/in-company-ct-cf9f2" class="subcategory-title">In Company</a></li>
+	                            
+
+	                                <li class="subcategory-menu"><a href="http://www.goldengenharia.com/on-line-ct-cf9f3" class="subcategory-title">On Line</a></li>
+	                            
+	                        </ul>
+	                    
+	                </li>
+	            
+
+	                <li class="category-menu">
+	                    <a class="fNiv category-title" href="http://www.goldengenharia.com/venda-de-equip-ct-11d0f9">Venda de Equip.</a>
+	                    
+	                    <!-- Subcategorias -->
+	                    
+	                </li>
+	            
+
+	                <li class="category-menu">
+	                    <a class="fNiv category-title" href="http://www.goldengenharia.com/linhas-de-vida-ct-1746a7">Linhas de Vida</a>
+	                    
+	                    <!-- Subcategorias -->
+	                    
+	                </li>
+	            
+				
+				
+
+	            
+
+	        </ul>
+	    </div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#jMenu").jMenu({
+            openClick : false,
+            ulWidth : '220',
+            absoluteTop: 'auto',
+            effects : {
+                effectTypeOpen : 'show',
+                effectTypeClose : 'hide'
+            },
+            animatedText : true,
+            paddingLeft: 5
+        });
+        $(".horizontal-menu").css("visibility", "visible");
+    });
+</script>
+
+                
+            </div>
+            
+            <div class="canvas-body">
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Estas imagens são mostradas somente na index.html -->
+
+
+
+
+
+                <!-- Verifica se a barra de categorias está na vertical -->            
+                
+
+                <div id="canvas-inner-body">
+                    
+
+<!-- Pop-up newsletter -->
+
+
+
+
+
+
+
+
+
+
+                                                              
+    <table width="100%" cellpadding="0" cellspacing="0" class="search-header">
+        <tbody><tr valign="middle">
+            <td align="left">
+                
+                <!-- Barra de navegação (breadcrumb) -->
+                
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Barra de navegação -->
+
+
+
+<div class="breadcrumb" style="padding: 0px !important">
+	<table width="100%" cellpadding="0" cellspacing="0">
+		<tbody><tr valign="middle">
+			<td valign="middle">
+				<div class="breadcrumb" style="margin: 0px !important; background-color: transparent !important;">
+				    <a href="http://www.goldengenharia.com/index.html">Início</a>
+				    <span class="breadcrumb-separator">›</span> <a href="http://www.goldengenharia.com/search.html">Todos os produtos</a>
+				    
+				        
+				        
+				            <span class="breadcrumb-separator">›</span> <a style="padding: 0px" href="http://www.goldengenharia.com/avcb-ct-cffb1?pageNum=&amp;sortBy=">AVCB</a>
+				        
+				       
+				    
+				</div>
+    		</td>
+    		
+    		
+	    		<td align="right">
+	    			<div class="iluria-sort">
+	    				<select style="float: left; visibility: hidden;"><option></option></select>
+	    			</div>
+	    			
+		    			
+
+
+
+
+
+
+
+
+		<div class="iluria-sort"> 
+			<select onchange="document.location=&#39;avcb-ct-cffb1?pageNum=1&amp;sortBy=&amp;changeSortBy=&#39; + this.value">
+				
+						<option value="1" selected="selected">Padrão</option>
+				
+						<option value="8">Mais recentes</option>
+				
+						<option value="2">Mais antigos</option>
+				
+						<option value="3">Maior preço</option>
+				
+						<option value="4">Menor preço</option>
+				
+			</select>
+		</div>
+
+
+
+		    		
+	    		</td>
+	    	
+    		
+    	</tr>
+    </tbody></table>
+    
+</div>
+
+                
+            </td>
+        </tr>
+    </tbody></table>
+
+
+<!-- Banner de categoria, mostrado na search.html apenas -->
+
+    
+    <div class="category-banner">
+        <img src="./AVCB/banner.jpg">
+    </div>
+    
+
+
+
+<!-- Produtos encontrados -->
+
+     
+    <!-- Lista de produtos -->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Ajusta o CSS de acordo com o tamanho e formato das thumbs -->
+<!-- O formato da thumb pode ser livre ou fixo e o tamanho pode ser pequeno ou médio -->
+
+    <style>
+        
+        
+        
+        .product-item-container { width: 216px; overflow:hidden; margin: 0px 15px 15px 0px; } 
+        
+        .product-item-container-inner {  }
+        .iluria-product-thumb { width: 100% !important; }
+    </style>
+
+
+
+
+
+
+
+
+
+<!-- Lista de produtos -->
+<div id="product-list-container">
+    
+
+
+
+
+
+
+        <div class="product-item-container" style="height: 293px;">
+            <div class="product-item-container-inner">
+                <a href="http://www.goldengenharia.com/pd-2e81e8-anexo-r.html?ct=cffb1&amp;p=1&amp;s=1">
+                    <div class="product-thumb-container">
+                        <!-- Thumb do produto -->
+                        <div class="product-thumb-image-container">
+                            
+                                    
+                                    
+
+
+
+
+
+
+
+
+
+			<script> (new Image()).src = "//s3.amazonaws.com/img.iluria.com/product/2E81E8/6E5878/330xN.jpg"; </script>
+		
+		<div title="Anexo R" class="iluria-product-thumb" style="width: 215px; height: 217px; background-image: url(&quot;//s3.amazonaws.com/img.iluria.com/product/2E81E8/6E5878/330xN.jpg&quot;); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;" data-second-image="//s3.amazonaws.com/img.iluria.com/product/2E81E8/6E5878/330xN.jpg" data-image-loaded="false">
+			<img src="./AVCB/330xN.jpg" border="0" alt="Anexo R" title="Anexo R">
+		</div>
+
+
+
+                                
+                                
+                                
+                                
+                            
+                            
+                            
+                            
+                        </div>
+                        
+                        <!-- Marcação do produto esgotado -->
+                        
+                        
+                        
+                            
+                            
+                        
+                        
+                            
+                            <!-- Marcação do promoção nos produto -->
+                            
+                            
+                            <!-- Marcação do frete grátis nos produto -->
+                            
+                            
+                        
+                        
+                    
+                        
+                        <!-- Zoom da thumb -->
+                        
+                            <div onclick="return zoomProductThumb(&#39;//s3.amazonaws.com/img.iluria.com/product/2E81E8/6E5878/850xN.jpg&#39;,&#39;pd-2e81e8-anexo-r.html?ct=cffb1&amp;p=1&amp;s=1&#39;);" class="product-thumb-zoom-icon">
+                                <img src="./AVCB/search-icon.png" border="0/">zoom
+                            </div>
+                        
+                    </div>
+                </a>
+                <div class="product-thumb-caption-container">
+                    <!-- Título do produto -->
+                    <div class="iluria-layout-search-product-title">
+                        <a href="http://www.goldengenharia.com/pd-2e81e8-anexo-r.html?ct=cffb1&amp;p=1&amp;s=1">
+                            Anexo R
+                        </a>
+                    </div>
+                    
+                    <!-- Preços -->
+                    <div class="product-thumb-price-container">
+                        
+                        
+                            <div class="product-thumb-original-price">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+	
+
+</div>
+                            <div class="product-thumb-price">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	   	<span class="product-price-text">Preço sob consulta</span>
+	 
+</div>
+                            <div class="product-thumb-price-installment">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</div>
+                            <div class="product-thumb-price-installment">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+</div>
+                        
+                    </div>
+                </div>    
+            </div>
+        </div>
+    
+        <div class="product-item-container" style="height: 293px;">
+            <div class="product-item-container-inner">
+                <a href="http://www.goldengenharia.com/pd-1f00e0-projeto-de-seguranca-contra-incendios-projeto-de-bombeiros.html?ct=cffb1&amp;p=1&amp;s=1">
+                    <div class="product-thumb-container">
+                        <!-- Thumb do produto -->
+                        <div class="product-thumb-image-container">
+                            
+                                    
+                                    
+
+
+
+
+
+
+
+
+
+			<script> (new Image()).src = "//s3.amazonaws.com/img.iluria.com/product/1F00E0/493922/330xN.jpg"; </script>
+		
+		<div title="Projeto de Segurança Contra Incêndios - Projeto de Bombeiros" class="iluria-product-thumb" style="width: 215px; height: 217px; background-image: url(&quot;//s3.amazonaws.com/img.iluria.com/product/1F00E0/4ADE3C/330xN.jpg&quot;); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;" data-second-image="//s3.amazonaws.com/img.iluria.com/product/1F00E0/493922/330xN.jpg" data-image-loaded="false">
+			<img src="./AVCB/330xN(1).jpg" border="0" alt="Projeto de Segurança Contra Incêndios - Projeto de Bombeiros" title="Projeto de Segurança Contra Incêndios - Projeto de Bombeiros">
+		</div>
+
+
+
+                                
+                                
+                                
+                                
+                            
+                            
+                            
+                            
+                        </div>
+                        
+                        <!-- Marcação do produto esgotado -->
+                        
+                        
+                        
+                            
+                            
+                        
+                        
+                            
+                            <!-- Marcação do promoção nos produto -->
+                            
+                            
+                            <!-- Marcação do frete grátis nos produto -->
+                            
+                            
+                        
+                        
+                    
+                        
+                        <!-- Zoom da thumb -->
+                        
+                            <div onclick="return zoomProductThumb(&#39;//s3.amazonaws.com/img.iluria.com/product/1F00E0/4ADE3C/850xN.jpg&#39;,&#39;pd-1f00e0-projeto-de-seguranca-contra-incendios-projeto-de-bombeiros.html?ct=cffb1&amp;p=1&amp;s=1&#39;);" class="product-thumb-zoom-icon">
+                                <img src="./AVCB/search-icon.png" border="0/">zoom
+                            </div>
+                        
+                    </div>
+                </a>
+                <div class="product-thumb-caption-container">
+                    <!-- Título do produto -->
+                    <div class="iluria-layout-search-product-title">
+                        <a href="http://www.goldengenharia.com/pd-1f00e0-projeto-de-seguranca-contra-incendios-projeto-de-bombeiros.html?ct=cffb1&amp;p=1&amp;s=1">
+                            Projeto de Segurança Contra Incêndios - Projeto de Bombeiros
+                        </a>
+                    </div>
+                    
+                    <!-- Preços -->
+                    <div class="product-thumb-price-container">
+                        
+                        
+                            <div class="product-thumb-original-price">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+	
+
+</div>
+                            <div class="product-thumb-price">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	   	<span class="product-price-text">Preço sob consulta</span>
+	 
+</div>
+                            <div class="product-thumb-price-installment">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</div>
+                            <div class="product-thumb-price-installment">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+</div>
+                        
+                    </div>
+                </div>    
+            </div>
+        </div>
+    
+        <div class="product-item-container" style="height: 293px;">
+            <div class="product-item-container-inner">
+                <a href="http://www.goldengenharia.com/pd-1ef396-teste-de-estanqueidade-glp.html?ct=cffb1&amp;p=1&amp;s=1">
+                    <div class="product-thumb-container">
+                        <!-- Thumb do produto -->
+                        <div class="product-thumb-image-container">
+                            
+                                    
+                                    
+
+
+
+
+
+
+
+
+
+			<script> (new Image()).src = "//s3.amazonaws.com/img.iluria.com/product/1EF396/491BCF/330xN.jpg"; </script>
+		
+		<div title="Teste de Estanqueidade GLP" class="iluria-product-thumb" style="width: 215px; height: 217px; background-image: url(&quot;http://s3.amazonaws.com/img.iluria.com/product/1EF396/4ADFD3/330xN.jpg&quot;); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;" data-second-image="http://s3.amazonaws.com/img.iluria.com/product/1EF396/491BCF/330xN.jpg" data-image-loaded="true">
+			<img src="./AVCB/330xN(2).jpg" border="0" alt="Teste de Estanqueidade GLP" title="Teste de Estanqueidade GLP">
+		</div>
+
+
+
+                                
+                                
+                                
+                                
+                            
+                            
+                            
+                            
+                        </div>
+                        
+                        <!-- Marcação do produto esgotado -->
+                        
+                        
+                        
+                            
+                            
+                        
+                        
+                            
+                            <!-- Marcação do promoção nos produto -->
+                            
+                            
+                            <!-- Marcação do frete grátis nos produto -->
+                            
+                            
+                        
+                        
+                    
+                        
+                        <!-- Zoom da thumb -->
+                        
+                            <div onclick="return zoomProductThumb(&#39;//s3.amazonaws.com/img.iluria.com/product/1EF396/4ADFD3/850xN.jpg&#39;,&#39;pd-1ef396-teste-de-estanqueidade-glp.html?ct=cffb1&amp;p=1&amp;s=1&#39;);" class="product-thumb-zoom-icon" style="display: none; opacity: 0;">
+                                <img src="./AVCB/search-icon.png" border="0/">zoom
+                            </div>
+                        
+                    </div>
+                </a>
+                <div class="product-thumb-caption-container">
+                    <!-- Título do produto -->
+                    <div class="iluria-layout-search-product-title">
+                        <a href="http://www.goldengenharia.com/pd-1ef396-teste-de-estanqueidade-glp.html?ct=cffb1&amp;p=1&amp;s=1">
+                            Teste de Estanqueidade GLP
+                        </a>
+                    </div>
+                    
+                    <!-- Preços -->
+                    <div class="product-thumb-price-container">
+                        
+                        
+                            <div class="product-thumb-original-price">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+	
+
+</div>
+                            <div class="product-thumb-price">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	   	<span class="product-price-text">Preço sob consulta</span>
+	 
+</div>
+                            <div class="product-thumb-price-installment">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</div>
+                            <div class="product-thumb-price-installment">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+</div>
+                        
+                    </div>
+                </div>    
+            </div>
+        </div>
+    
+</div>
+
+
+
+    
+    <!-- Paginação -->
+    <div class="pagination">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+<!-- Produto não encontrado -->
+
+
+<!-- Scripts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Define a quantidade de colunas para a lista de produtos e espaçamento entre elas -->
+
+    <script> 
+        
+        
+            var columns = 4;
+            var masonryMargin = 15;
+        
+            
+    </script>
+
+
+
+
+
+<!-- A margem direita da última coluna de produtos é ajustada para zero -->
+    <script>
+        function adjustProductThumbContainerMargin() {
+            $(".bestsellers-product-list-container .product-item-container").each(function(i) {
+                if((i+1) % columns == 0)
+                    $(this).css("margin-right", "0px");
+            });
+            
+            $(".product-item-container").not('.bestsellers-product-list-container .product-item-container').each(function(i) {
+                if((i+1) % columns == 0)
+                    $(this).css("margin-right", "0px");
+            });
+        }
+        $(function(){ adjustProductThumbContainerMargin(); });
+    </script>
+    
+    
+    <script>
+        function adjustThumbContainerHeight() {
+        	
+        	var maxHeight=0;
+            
+        	$(".product-item-container").height(""); // "reseta" o tamanho de todas as thumbs
+        	
+        	 
+        	
+        	$(".product-item-container").each(function(i) {
+            	maxHeight = Math.max(maxHeight, $(this).height()); 
+            }).height(maxHeight);
+        }
+        $(function(){ 
+        	adjustThumbContainerHeight(); 
+
+    		$(".thumb-stamp").bind('mouseenter', function() { 
+    			$(this).closest(".product-thumb-container").find(".product-thumb-image-container .iluria-product-thumb").mouseenter();
+    		});
+
+    		$(".thumb-stamp").bind('mouseleave', function() { 
+    			$(this).closest(".product-thumb-container").find(".product-thumb-image-container .iluria-product-thumb").mouseleave();
+    		});
+
+        });
+    </script>
+
+
+
+
+  
+	<script>
+	 function adjustThumbImageSquareHeight() {
+         
+     	$(".iluria-product-thumb").height( $(".iluria-product-thumb").width()+1 ); // "reseta" o tamanho de todas as thumbs
+
+     }
+	 $(function(){ adjustThumbImageSquareHeight(); });
+	</script>
+ 
+
+<!-- Se o layout tem thumb com tamanho livre, usa o plugin Masonry -->
+
+
+<!-- Animação quando o usuário passa o mouse sobre as thumbs (fadein e fadeout) -->
+<script>
+    
+    
+    function animateThumbs(elements) {
+        $(elements).hover(function(){
+            
+            $(this).children(".product-item-container-inner").children("a").children(".product-thumb-container").children(".product-thumb-zoom-icon").show();
+            $(this).children(".product-item-container-inner").children("a").children(".product-thumb-container").children(".product-thumb-zoom-icon").animate({ opacity: 1 }, 300);
+        }, 
+                          function()
+                          {
+                              
+                              $(this).children(".product-item-container-inner").children("a").children(".product-thumb-container").children(".product-thumb-zoom-icon").hide();
+                              $(this).children(".product-item-container-inner").children("a").children(".product-thumb-container").children(".product-thumb-zoom-icon").animate({ opacity: 0 }, 200);
+                          });
+    }
+    $(function() {
+        animateThumbs($("#product-list-container").children(".product-item-container"));
+    });
+</script>
+
+<!-- Paginação infinita -->
+
+    <script src="./AVCB/jquery.infinitescroll.min.js"></script>
+    <script>
+        $(function(){
+            $(".iluria-pagination").hide();
+            $("#product-list-container").infinitescroll({
+                navSelector      : ".iluria-pagination",
+                nextSelector     : ".iluria-pagination-next a:first",
+                itemSelector     : ".product-item-container",
+                bufferPx         : 200,
+                pathParse        : function(path) {
+
+                	var argMatches = path.match("[?&]pageNum=");
+                	var token = argMatches[0];
+                	
+                    var i = path.indexOf(token);
+                    i = i + token.length;
+                    
+                	var pageValueMatches = path.match("[?&]pageNum=[0-9]{1,}");
+                	var strPageId = pageValueMatches[0].match("[0-9]{1,}");
+                	var pageId = parseInt(strPageId)-1;
+                	
+                    var part1 = path.substring(0,i);
+                    var part2 = path.substring(i+strPageId.length);
+                	
+                    var result = [part1, part2];
+                    this.state.currPage = pageId;
+                    return result;
+                	
+                },
+                loading            : {
+                    img                : "//s3.amazonaws.com/template-assets.iluria.com/commons/spinner-3.gif",
+                    finishedMsg        : "Não há mais produtos para carregar",
+                    msgText            : "Carregando mais produtos..."
+                }
+            }, function( newElements ) {
+                if(typeof adjustProductThumbContainerMargin == "function") 
+                    adjustProductThumbContainerMargin();
+                if(typeof updateMasonry == "function") 
+                    updateMasonry($(newElements));
+                if(typeof animateThumbs == "function") 
+                    animateThumbs($(newElements));
+                if(typeof adjustThumbContainerHeight == "function")
+                	adjustThumbContainerHeight();
+                if(typeof adjustThumbImageSquareHeight == "function")
+                	adjustThumbImageSquareHeight();
+                
+                /* Pré-carrega a segunda thumb de cada produto */
+                $(newElements).each(function() { 
+                    var secondThumbUrl = $(this).find(".iluria-product-thumb-img").attr("data-second-image"); 
+                    if(secondThumbUrl != undefined && secondThumbUrl != "")
+                        (new Image()).src = secondThumbUrl;
+                });
+                
+                /* Associa o mouse hover para mostrar a segunda thumb, para layout com thumb de tamanho livre */
+                if(typeof freeSizeThumbMouseOver == "function") {
+                    $(".iluria-product-thumb-img").unbind('mouseenter mouseleave');
+                    $(".iluria-product-thumb-img").bind('mouseenter', function() { freeSizeThumbMouseOver($(this)); });
+                    $(".iluria-product-thumb-img").bind('mouseleave', function() { freeSizeThumbMouseOut($(this)); });
+                }
+                
+                if(typeof thumbMouseOver == "function") {
+                    /* Associa o mouse hover para mostrar a segunda thumb, para layout com thumb de tamanho fixo */
+                    $(".iluria-product-thumb").unbind('mouseenter mouseleave');
+                    $(".iluria-product-thumb").bind('mouseenter', function() { thumbMouseOver($(this)); });
+                    $(".iluria-product-thumb").bind('mouseleave', function() { thumbMouseOut($(this)); });
+                }
+            });
+        });
+    </script>
+
+
+<!-- Zoom na foto do produto -->
+
+    <script>
+        function zoomProductThumb(zoomImage, productUrl) {
+            $.fancybox.open({ href : zoomImage }, { 
+                modal : false,
+                closeBtn : false,
+                openEffect : "none",
+                closeEffect : "none",
+                padding: 0,
+                helpers : {
+                    overlay : {
+                        closeClick : true,
+                        locked : false,
+                        speedOut : 0,
+                        css : {
+                            'z-index' : '10000'
+                        }
+                    }
+                },
+                afterShow : function() { 
+                    $(".fancybox-wrap").css("z-index", "20000");
+                    $(".fancybox-wrap").prepend("<div class='fancybox-custom-buttons-container'><div class='fancybox-custom-buttons-container-wrapper'><div class='fancybox-buy-button'>Detalhes</div><div class='fancybox-close-button'>Fechar</div></div></div>");
+                    $(".fancybox-buy-button").click(function() {
+                        document.location = productUrl;
+                    });
+                    $(".fancybox-close-button").click(function() {
+                        $.fancybox.close();
+                    });
+                    $(".fancybox-outer").click(function() {
+                        $.fancybox.close();
+                    });
+                    $(".fancybox-outer").css("cursor", "hand");
+                    $(".fancybox-outer").css("cursor", "pointer");
+                }
+            });
+            return false;
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Rodapé -->
+<div id="footer" class="footer">
+    <div id="canvas-inner-footer">
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <tbody><tr valign="top">
+                <td>
+                    <!-- Páginas criadas pelo lojista -->
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="iluria-pages-container">
+    <div class="footer-title">
+        Institucional
+    </div>
+    <div class="iluria-layout-pages">
+        <dl class="pages-container">
+            
+            
+
+
+
+
+
+
+
+                <dd class="pages-item">» <a href="http://www.goldengenharia.com/cursos-on-line-pg-3dcee">Cursos On Line</a></dd>
+            
+
+                <dd class="pages-item">» <a href="http://www.goldengenharia.com/a-gold-pg-37570">A Gold</a></dd>
+            
+
+                <dd class="pages-item">» <a href="http://www.goldengenharia.com/contato-pg-375a3">Contato</a></dd>
+            
+            
+            
+            
+            
+            
+        </dl>
+    </div>
+</div>
+​
+                    
+                    <!-- Selo do E-Bit -->
+                    
+                </td>
+                <td style="padding-left: 20px">
+                    
+                        <!-- Imagem do banner de meios de pagamentos -->
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer-title">
+    Pagamentos
+</div>
+
+    <img src="./AVCB/paymentBanner.jpg" border="0" style="max-width: 200px; margin: 16px 0px">
+
+
+    
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                </td>        
+                
+                <td style="padding-left: 20px">
+                	<div style="max-width: 225px; overflow: hidden;">
+	                    <!-- Campo da newsletter -->
+	                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="iluria-newsletter-container">
+        <div class="footer-title">
+        	Receba nossa newsletter
+        </div>
+        <div class="iluria-layout-newsletter">
+            <table width="100%" cellpadding="0" cellspacing="0" style="padding-top: 20px">
+                <tbody><tr valign="center">
+                    <td align="left" width="128">
+                        <input style="width: 120px;" id="newsletter-email" class="newsletter-email" type="text" name="newsletter-email" value="">
+                    </td>
+                    <td align="left">
+                        <input value=" OK " type="button" class="newsletter-button" onclick="javascript: subscribeNewsletter()">
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+
+    
+    <script>
+        var emailText = "Digite seu email";       
+        $(function() {
+            $("#newsletter-email").val(emailText);
+            $('#newsletter-email').focus(
+                function()
+                {
+                    if ($('#newsletter-email').val('') == emailText)
+                    {
+                        $('#newsletter-email').val('');
+                    }
+                });
+        });
+        
+        function subscribeNewsletter() {
+            var email = $('#newsletter-email').val();
+            if($.trim(email) == "")
+            {
+                alert("Por favor informe seu email.");
+                return;
+            }
+            
+            Iluria.clientAccount.subscribeNewsletter(email);
+        }
+    </script>
+
+
+
+	                    
+	                    <!-- Ícones das mídias sociais -->
+	                    
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Ícones das redes sociais -->
+<div id="social-media-icons">
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+	                    
+		                <!-- Selos de segurança -->
+			            
+			                
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Selos de segurança da loja -->
+<div class="security-stamps-container">
+    
+        <a href="http://www.google.com/safebrowsing/diagnostic?site=www.goldengenharia.com" target="_blank"><img src="./AVCB/google-safe.png" border="0"></a>
+    
+    
+    
+        <a href="https://safeweb.norton.com/report/show?url=www.goldengenharia.com" target="_blank"><img src="./AVCB/norton-secure.png" border="0"></a>
+    
+    
+    
+        <a href="http://www.iluria.com.br/valida-loja/www.goldengenharia.com" target="_blank">
+            <img src="./AVCB/loja-segura-ssl.png" border="0">
+        </a>
+    
+</div>
+
+
+			            
+		            </div> 
+                </td>
+            </tr>
+        </tbody></table>
+        
+        
+        <center>
+            <div class="copyright pages-container">
+                Gold Engenharia - contato@goldengenharia.com - 15 3244.4563 - Cerbero Comunicação &amp; Design
+            </div>
+        </center>
+        
+        
+        <center>
+            <div class="copyright pages-container">
+                Copyright © Gold Engenharia - Todos os direitos reservados <br>
+                
+
+
+
+
+
+
+
+
+<center>
+	<div class="iluria-copyright">
+		<a href="http://www.iluria.com.br/" target="_blank" alt="Montar loja virtual no Iluria é fácil. Experimente grátis." title="Montar loja virtual no Iluria é fácil. Experimente grátis.">Tecnologia © Iluria</a>
+	</div>
+</center>
+ 
+                <!-- Atenção: É proibido retirar o copyright Iluria -->
+            </div>
+        </center>
+    </div>
+</div>
+
+
+<!-- Scripts do chat -->
+
+    
+
+
+
+
+
+
+
+
+
+
+<a href="http://www.goldengenharia.com/avcb-ct-cffb1#" id="toTop" style="display: none;"><span id="toTopHover"></span>To Top</a></body></html>
