@@ -1,2 +1,0 @@
-function carregaMapa(){var mapa;var marcador=new google.maps.Marker();var centro=new google.maps.LatLng(dadosMapa.lat,dadosMapa.lng);var parametros={zoom:17,center:centro,mapTypeId:google.maps.MapTypeId.ROADMAP,scrollwheel:false};mapa=new google.maps.Map(document.getElementById('area-mapa'),parametros);marcador.setPosition(centro);marcador.setMap(mapa);marcador.setDraggable(true);}
-google.maps.event.addDomListener(window,'load',carregaMapa);jQuery('document').ready(function(){jQuery('.fbitem').fancybox({helpers:{title:{type:'outside'},thumbs:{width:50,height:50}}});});
